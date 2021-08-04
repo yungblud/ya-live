@@ -4,9 +4,9 @@ import 'firebase/firestore';
 import debug from 'debug';
 
 const config = {
-  projectId: 'sleepy-owl-6a78a',
-  apiKey: 'AIzaSyAtbpCdHNEZDGFasmj1XPNSoChE1C0Uwn4',
-  authDomain: 'sleepy-owl-6a78a.firebaseapp.com',
+  projectId: 'ya-live-demo',
+  apiKey: 'AIzaSyADOcuDUslyomdCpFnQMf4owlpxeGAPT44',
+  authDomain: 'ya-live-demo.firebaseapp.com',
 };
 
 const log = debug('tjl:models:firebase_auth_client');
