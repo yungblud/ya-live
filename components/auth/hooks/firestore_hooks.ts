@@ -11,8 +11,8 @@ export const useStoreDoc = ({
   docPath: string;
 }) => {
   const [data, updateDoc] = useState<{
-    docRef: firebase.firestore.DocumentReference;
-    docValue?: firebase.firestore.DocumentSnapshot;
+    docRef: firebase.default.firestore.DocumentReference;
+    docValue?: firebase.default.firestore.DocumentSnapshot;
   }>(() => {
     const doc = FirebaseAuthClient.getInstance()
       .FireStore.collection(collectionPath)
@@ -24,7 +24,7 @@ export const useStoreDoc = ({
 
   useEffect(() => {
     // listen for auth state changes
-    const snapshot = data.docRef.onSnapshot((doc: firebase.firestore.DocumentSnapshot) => {
+    const snapshot = data.docRef.onSnapshot((doc: firebase.default.firestore.DocumentSnapshot) => {
       updateDoc({
         docRef: data.docRef,
         docValue: doc.exists ? doc : undefined,
@@ -49,8 +49,8 @@ export const useParticipantStoreDoc = ({
   uid: string;
 }) => {
   const [data, updateDoc] = useState<{
-    docRef: firebase.firestore.DocumentReference;
-    docValue?: firebase.firestore.DocumentSnapshot;
+    docRef: firebase.default.firestore.DocumentReference;
+    docValue?: firebase.default.firestore.DocumentSnapshot;
   }>(() => {
     const doc = FirebaseAuthClient.getInstance()
       .FireStore.collection(collectionPath)
@@ -64,7 +64,7 @@ export const useParticipantStoreDoc = ({
 
   useEffect(() => {
     // listen for auth state changes
-    const snapshot = data.docRef.onSnapshot((doc: firebase.firestore.DocumentSnapshot) => {
+    const snapshot = data.docRef.onSnapshot((doc: firebase.default.firestore.DocumentSnapshot) => {
       updateDoc({
         docRef: data.docRef,
         docValue: doc.exists ? doc : undefined,

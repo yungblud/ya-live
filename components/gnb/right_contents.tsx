@@ -1,5 +1,5 @@
 import { Avatar, Dropdown, Menu, Spin } from 'antd';
-import { User } from 'firebase/app';
+import { User } from '@firebase/auth-types';
 import React from 'react';
 
 interface Props {

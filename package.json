@@ -7,7 +7,9 @@
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore",
-    "ts": "ts-node -r tsconfig-paths/register -r dotenv/config --project tsconfig.siege.json"
+    "ts": "ts-node -r tsconfig-paths/register -r dotenv/config --project tsconfig.siege.json",
+    "tsc:firebaseconfigs": "tsc -t es5 ./test.ts --skipLibCheck true && tsc -t es5 ./models/commons/firebase_auth_client.model.ts --skipLibCheck true",
+    "upload:quiz": "node ./test.js"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

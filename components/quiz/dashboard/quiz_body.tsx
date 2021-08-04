@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { QuizContext } from '@/context/quiz/dashboard/QuizContext';
 import { EN_QUIZ_STATUS } from '@/models/quiz/interface/EN_QUIZ_STATUS';
+import FirebaseAuthClient from '@/models/commons/firebase_auth_client.model';
+import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
 import Cover from './cover';
 import styles from './quiz_body.css';
 import QuizDesc from './quiz_desc';
 import Selectors, { QuizAnswers } from './selectors';
-import FirebaseAuthClient from '@/models/commons/firebase_auth_client.model';
-import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
 import Countdown, { COUNTDOWN } from './countdown';
 import Statistics from './statistics';
 

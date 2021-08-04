@@ -3,7 +3,7 @@ import { useEffect, useState, createContext, useContext } from 'react';
 import FirebaseAuthClient from '../../../models/commons/firebase_auth_client.model';
 
 interface UserContext {
-  user: firebase.User | null;
+  user: firebase.default.User | null;
 }
 
 export const userContext = createContext<UserContext>({
@@ -25,7 +25,7 @@ export const useAuth = () => {
     };
   });
 
-  function onChange(user: firebase.User | null) {
+  function onChange(user: firebase.default.User | null) {
     console.log('onChange');
     setState({ initializing: false, haveUser: !!user, user });
   }

@@ -1,12 +1,12 @@
-import * as firebase from 'firebase/app';
+import firebaseApp from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 import debug from 'debug';
 
 const config = {
-  projectId: 'sleepy-owl-6a78a',
-  apiKey: 'AIzaSyAtbpCdHNEZDGFasmj1XPNSoChE1C0Uwn4',
-  authDomain: 'sleepy-owl-6a78a.firebaseapp.com',
+  projectId: 'ya-live-demo',
+  apiKey: 'AIzaSyADOcuDUslyomdCpFnQMf4owlpxeGAPT44',
+  authDomain: 'ya-live-demo.firebaseapp.com',
 };
 
 const log = debug('tjl:models:firebase_auth_client');
@@ -14,17 +14,17 @@ const log = debug('tjl:models:firebase_auth_client');
 export default class FirebaseAuthClient {
   public static instance: FirebaseAuthClient;
 
-  private auth: firebase.auth.Auth;
+  private auth: firebase.default.auth.Auth;
 
-  private fireStore: firebase.firestore.Firestore;
+  private fireStore: firebase.default.firestore.Firestore;
 
   public constructor() {
-    if (!!firebase.apps.length === false) {
+    if (!!firebaseApp.apps.length === false) {
       log(config);
-      firebase.initializeApp(config);
+      firebaseApp.initializeApp(config);
     }
-    this.auth = firebase.auth();
-    this.fireStore = firebase.firestore();
+    this.auth = firebaseApp.auth();
+    this.fireStore = firebaseApp.firestore();
     console.log('firebase auth client constructor');
   }
 
@@ -43,14 +43,14 @@ export default class FirebaseAuthClient {
     return this.fireStore;
   }
 
-  public isInitialized(): Promise<firebase.User | null> {
+  public isInitialized(): Promise<firebase.default.User | null> {
     return new Promise((resolve) => {
       this.auth.onAuthStateChanged(resolve);
     });
   }
 
   public signInWithGoogle() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new firebaseApp.auth.GoogleAuthProvider();
     return this.auth.signInWithPopup(provider);
   }
 }

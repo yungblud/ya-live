@@ -35,14 +35,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var firebase_admin_model_1 = require("./models/commons/firebase_admin.model");
 var text = fs.readFileSync('./quiz_convert.json', 'utf8');
 var parsed = JSON.parse(text);
-var collectionRef = firebase_admin_model_1["default"].getInstance()
+var collectionRef = firebase_admin_model_1.default.getInstance()
     .Firestore.collection('quiz')
-    .doc('ㅇㄱㅇㅁ')
+    .doc('circusmas')
     .collection('quiz_bank');
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     var _i, parsed_1, data;
