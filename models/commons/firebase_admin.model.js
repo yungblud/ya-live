@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var debug_1 = require("debug");
 var admin = require("firebase-admin");
+var dotenv = require("dotenv");
+dotenv.config();
+var _a = process.env, projectId = _a.projectId, privateKey = _a.privateKey, clientEmail = _a.clientEmail, databaseurl = _a.databaseurl;
 var log = debug_1.default('tjl:models:firebaseadmin');
 var FirebaseAdmin = /** @class */ (function () {
     function FirebaseAdmin() {
@@ -42,11 +45,11 @@ var FirebaseAdmin = /** @class */ (function () {
         }
         log('bootstrap start');
         var config = {
-            databaseurl: process.env.databaseurl || '',
+            databaseurl: databaseurl || '',
             credential: {
-                privateKey: (process.env.privateKey || '').replace(/\\n/g, '\n'),
-                clientEmail: process.env.clientEmail || '',
-                projectId: process.env.projectId || '',
+                privateKey: (privateKey || '').replace(/\\n/g, '\n'),
+                clientEmail: clientEmail || '',
+                projectId: projectId || '',
             },
         };
         admin.initializeApp({

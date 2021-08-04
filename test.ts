@@ -7,7 +7,7 @@ const parsed = JSON.parse(text) as any[];
 
 const collectionRef = FirebaseAdmin.getInstance()
   .Firestore.collection('quiz')
-  .doc('circusmas')
+  .doc('dongho')
   .collection('quiz_bank');
 
 (async () => {
