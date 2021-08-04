@@ -1,5 +1,10 @@
 import debug from 'debug';
 import * as admin from 'firebase-admin';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
+const { privateKey, clientEmail, projectId, databaseurl } = process.env;
 
 const log = debug('tjl:models:firebaseadmin');
 
@@ -47,11 +52,11 @@ export default class FirebaseAdmin {
     }
     log('bootstrap start');
     const config: Config = {
-      databaseurl: process.env.databaseurl || '',
+      databaseurl: databaseurl || '',
       credential: {
-        privateKey: (process.env.privateKey || '').replace(/\\n/g, '\n'),
-        clientEmail: process.env.clientEmail || '',
-        projectId: process.env.projectId || '',
+        privateKey: (privateKey || '').replace(/\\n/g, '\n'),
+        clientEmail: clientEmail || '',
+        projectId: projectId || '',
       },
     };
 
