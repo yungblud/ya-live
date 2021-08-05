@@ -44,6 +44,9 @@ function statusButtons({ status }: { status: EN_QUIZ_STATUS }) {
   if (status === EN_QUIZ_STATUS.SHOW_RESULT) {
     buttons.push({ title: 'IDLE', status: EN_QUIZ_STATUS.IDLE });
   }
+  if (status === EN_QUIZ_STATUS.FINISH) {
+    buttons.push({ title: 'PREPARE', status: EN_QUIZ_STATUS.PREPARE });
+  }
   return buttons;
 }
 
