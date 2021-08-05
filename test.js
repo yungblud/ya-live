@@ -38,12 +38,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var firebase_admin_model_1 = require("./models/commons/firebase_admin.model");
+var EN_QUIZ_STATUS_1 = require("./models/quiz/interface/EN_QUIZ_STATUS");
 var text = fs.readFileSync('./quiz_convert.json', 'utf8');
 var parsed = JSON.parse(text);
 var collectionRef = firebase_admin_model_1.default.getInstance()
     .Firestore.collection('quiz')
     .doc('dongho')
     .collection('quiz_bank');
+var docRef = firebase_admin_model_1.default.getInstance()
+    .Firestore.collection('quiz')
+    .doc('dongho');
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     var _i, parsed_1, data;
     return __generator(this, function (_a) {
@@ -63,7 +67,15 @@ var collectionRef = firebase_admin_model_1.default.getInstance()
             case 3:
                 _i++;
                 return [3 /*break*/, 1];
-            case 4: return [2 /*return*/];
+            case 4: 
+            // todo: add or update PREPARE field
+            return [4 /*yield*/, docRef.set({
+                    status: EN_QUIZ_STATUS_1.EN_QUIZ_STATUS.PREPARE,
+                })];
+            case 5:
+                // todo: add or update PREPARE field
+                _a.sent();
+                return [2 /*return*/];
         }
     });
 }); })();
