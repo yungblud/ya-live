@@ -328,7 +328,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
       <Layout className="layout">
         <Layout.Header>
           <span className={styles.yalive}>
-            yalive
+            cochl live
             <span role="img" aria-label="gift">
               🎁
             </span>

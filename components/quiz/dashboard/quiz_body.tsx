@@ -97,7 +97,7 @@ const QuizBody: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.yalive}>yalive</h1>
+      <h1 className={styles.yalive}>cochl live</h1>
       <Cover active={coverActive} status={quiz.status} />
       <Statistics active={quiz.status === EN_QUIZ_STATUS.IDLE} />
       <Countdown

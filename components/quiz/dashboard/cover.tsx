@@ -1,7 +1,7 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
-import styles from './cover.css';
 import { EN_QUIZ_STATUS } from '@/models/quiz/interface/EN_QUIZ_STATUS';
+import styles from './cover.css';
 
 interface CoverProps {
   active: boolean;
@@ -30,7 +30,7 @@ const Cover: React.FC<CoverProps> = ({ active, status }) => {
   return (
     <animated.section className={styles.container} style={containerStyle}>
       <div>
-        <h1 className={styles.heading}>yalive</h1>
+        <h1 className={styles.heading}>cochl live</h1>
         {caption && (
           <p className={styles.caption}>
             <span className={styles.highlight}>{caption}</span>

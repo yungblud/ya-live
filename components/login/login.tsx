@@ -50,7 +50,7 @@ const Login: React.FC<{ quizID: string }> = ({ quizID }) => {
       return (
         <>
           <span className={styles.yalive}>
-            yalive
+            cochl live
             <span role="img" aria-label="gift">
               🎁
             </span>
