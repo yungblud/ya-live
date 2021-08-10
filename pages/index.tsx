@@ -2,19 +2,12 @@ import { NextPage } from 'next';
 import React from 'react';
 import { Typography, Button } from 'antd';
 import { useAuth } from '@/components/auth/hooks/auth_hooks';
+import CenterContainer from '@/components/common/CenterContainer';
 
 const IndexPage: NextPage = () => {
   const { haveUser } = useAuth();
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 'calc(100vh)',
-      }}
-    >
+    <CenterContainer>
       <Typography>
         <Typography.Title style={{ textAlign: 'center' }}>Welcome To Cochl Live</Typography.Title>
         <Typography.Paragraph style={{ textAlign: 'center', fontSize: 19 }}>
@@ -30,7 +23,7 @@ const IndexPage: NextPage = () => {
           Login via google!
         </Button>
       )}
-    </div>
+    </CenterContainer>
   );
 };
 
