@@ -15,29 +15,35 @@ interface Props {
 
 async function onClickSignIn(redirectUrl: string, setLoading?: (loading: boolean) => void) {
   setLoading && setLoading(true);
-  const result = await FirebaseAuthClient.getInstance().signInWithGoogle();
-  if (result.user) {
-    const idToken = await result.user.getIdToken();
-    const findResp = await memberFind({ member_id: result.user.uid, isServer: false });
-    if (
-      !(findResp.status === 200 && findResp.payload && findResp.payload.uid === result.user.uid)
-    ) {
-      const { uid, displayName, email, phoneNumber, photoURL } = result.user;
-      const data: MemberInfo = {
-        uid,
-        displayName: displayName || undefined,
-        email: email || undefined,
-        phoneNumber: phoneNumber || undefined,
-        photoURL: photoURL || undefined,
-      };
-      await memberAdd({
-        data,
-        token: idToken,
-        isServer: false,
-      });
+  try {
+    const result = await FirebaseAuthClient.getInstance().signInWithGoogle();
+    console.log(result);
+    if (result.user) {
+      const idToken = await result.user.getIdToken();
+      const findResp = await memberFind({ member_id: result.user.uid, isServer: false });
+      if (
+        !(findResp.status === 200 && findResp.payload && findResp.payload.uid === result.user.uid)
+      ) {
+        const { uid, displayName, email, phoneNumber, photoURL } = result.user;
+        const data: MemberInfo = {
+          uid,
+          displayName: displayName || undefined,
+          email: email || undefined,
+          phoneNumber: phoneNumber || undefined,
+          photoURL: photoURL || undefined,
+        };
+        await memberAdd({
+          data,
+          token: idToken,
+          isServer: false,
+        });
+      }
+      window.location.href = redirectUrl;
     }
+  } catch (e) {
+    console.error(e);
+  } finally {
     setLoading && setLoading(false);
-    window.location.href = redirectUrl;
   }
 }
 
