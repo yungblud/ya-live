@@ -2,8 +2,8 @@ import { Button, Divider, Layout, List, message } from 'antd';
 import { NextPage } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import React, { useState } from 'react';
+import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
 import styles from '../../../components/login/login.css';
-
 import { useStoreDoc } from '../../../components/auth/hooks/firestore_hooks';
 import SlLayout from '../../../components/layout';
 import getStringValueFromQuery from '../../../controllers/etc/get_value_from_query';
@@ -56,6 +56,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
   const [quizData, updateQuizData] = useState<QuizItem[]>();
   const [pubCorrectAnswerStatus, updatePubCorrectAnswerStatus] = useState(false);
   const [calWrongAnswerStatus, updateCalWrongAnswerStatus] = useState(false);
+  const [aliveParticipants, setAliveParticipants] = useState<QuizParticipant[]>([]);
   const { docValue: info } = useStoreDoc({ collectionPath: 'quiz', docPath: id });
 
   const operationInfo: QuizOperation = (() => {
@@ -167,6 +168,19 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
             }, 15000);
           }
           updateStatusChangeLoader(false);
+          if (mv.status === EN_QUIZ_STATUS.FINISH) {
+            const resp = await opsService.getAliveParticipantsInfo({
+              quiz_id: id,
+              info: {},
+              isServer: false,
+            });
+            if (resp.payload) {
+              setAliveParticipants(resp.payload);
+            }
+          }
+          if (mv.status === EN_QUIZ_STATUS.PREPARE) {
+            setAliveParticipants([]);
+          }
         }}
       >
         {mv.title}
@@ -339,6 +353,14 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
             <div>현재상태 : {operationInfo.status}</div>
             <div>참가자 : {operationInfo.total_participants}</div>
             <div>생존자 : {operationInfo.alive_participants}</div>
+            {operationInfo.status === EN_QUIZ_STATUS.FINISH && (
+              <div>
+                생존자 명단 :{' '}
+                {aliveParticipants?.map((user) => (
+                  <div key={user.id}>{user.displayName}</div>
+                ))}
+              </div>
+            )}
             <Divider />
             <div>{statusSwitch}</div>
             <Divider />

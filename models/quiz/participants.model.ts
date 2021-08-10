@@ -3,6 +3,20 @@ import { QuizOperation } from './interface/I_quiz_operation';
 import { QuizParticipant } from './interface/I_quiz_participant';
 import { EN_QUIZ_STATUS } from './interface/EN_QUIZ_STATUS';
 
+async function getAliveParticipantsInfo(args: { quiz_id: string }) {
+  const ref = FirebaseAdmin.getInstance()
+    .Firestore.collection('quiz')
+    .doc(args.quiz_id)
+    .collection('participants');
+  try {
+    const info = await ref.get();
+    const users = info.docs.map((doc) => doc.data()).filter((user) => user.alive === true);
+    return users;
+  } catch (err) {
+    return null;
+  }
+}
+
 async function participantFind(args: { user_id: string; quiz_id: string }) {
   const ref = FirebaseAdmin.getInstance()
     .Firestore.collection('quiz')
@@ -75,4 +89,4 @@ async function joinParticipant(args: { user_id: string; quiz_id: string; info: Q
   }
 }
 
-export default { participantFind, updateParticipant, joinParticipant };
+export default { participantFind, updateParticipant, joinParticipant, getAliveParticipantsInfo };
