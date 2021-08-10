@@ -1,8 +1,7 @@
 import { Button, Col, Row } from 'antd';
 import { NextPage } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import React from 'react';
-
+import React, { useState } from 'react';
 import { useAuth, userContext, useSession } from '../components/auth/hooks/auth_hooks';
 import Layout from '../components/layout';
 import getStringValueFromQuery from '../controllers/etc/get_value_from_query';
@@ -14,7 +13,8 @@ interface Props {
   query: ParsedUrlQuery;
 }
 
-async function onClickSignIn(redirectUrl: string) {
+async function onClickSignIn(redirectUrl: string, setLoading?: (loading: boolean) => void) {
+  setLoading && setLoading(true);
   const result = await FirebaseAuthClient.getInstance().signInWithGoogle();
   if (result.user) {
     const idToken = await result.user.getIdToken();
@@ -36,6 +36,7 @@ async function onClickSignIn(redirectUrl: string) {
         isServer: false,
       });
     }
+    setLoading && setLoading(false);
     window.location.href = redirectUrl;
   }
 }
@@ -57,6 +58,7 @@ function SignOut() {
 
 const SignIn: NextPage<Props> = ({ query }) => {
   const redirectUrl = getStringValueFromQuery({ query, field: 'redirect' });
+  const [loading, setLoading] = useState<boolean>(false);
   const { initializing, haveUser, user } = useAuth();
   if (initializing) {
     return (
@@ -76,7 +78,7 @@ const SignIn: NextPage<Props> = ({ query }) => {
         size="large"
         icon="google"
         onClick={() => {
-          onClickSignIn(redirectUrl || '/');
+          onClickSignIn(redirectUrl || '/', setLoading);
         }}
       >
         Google
@@ -95,6 +97,7 @@ const SignIn: NextPage<Props> = ({ query }) => {
           <div style={{ margin: '10% 0' }}>{haveUser ? signOutBtn : signInBtn}</div>
         </Col>
       </Row>
+      {loading && <div style={{ textAlign: 'center' }}>Loading...</div>}
     </Layout>
   );
 };
