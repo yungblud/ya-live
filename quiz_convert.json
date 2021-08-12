@@ -22,7 +22,7 @@
         ],
         "quiz_correct_answer": 2,
         "quiz_type": "TEXT",
-        "quiz_image": "https://i.imgur.com/WzQj6pe.jpeg"
+        "quiz_image_url": "https://i.imgur.com/WzQj6pe.jpeg"
     },
     {
         "quiz_id": "q01",
@@ -654,7 +654,7 @@
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Yes, I Know"
+                "title": "Yes. I Know"
             },
             {
                 "no": 2,
@@ -1274,7 +1274,7 @@
     },
     {
         "quiz_id": "q53",
-        "quiz_desc": "심하게 맞거나 부딪혔을 경우, 살갗 속에 퍼렇게 맺히는 것은?",
+        "quiz_desc": "심하게 맞거나 부딪혔을 경우 살갗 속에 퍼렇게 맺히는 것은?",
         "quiz_selector": [
             {
                 "no": 1,
@@ -1298,7 +1298,7 @@
     },
     {
         "quiz_id": "q54",
-        "quiz_desc": "말레이시아의 수도 '쿠알라룸푸르'는 현지어로 무슨 뜻일까?",
+        "quiz_desc": "말레이시아의 수도 '쿠알라룸푸르;는 현지어로 무슨 뜻일까?",
         "quiz_selector": [
             {
                 "no": 1,
