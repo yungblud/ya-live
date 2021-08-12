@@ -422,7 +422,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
                 퀴즈 불러오기
               </Button>
               {quizBank}
-              <ParticipantList participants={allParticipants} />
+              <ParticipantList quizId={id} />
             </div>
           </>
         </Layout.Content>
