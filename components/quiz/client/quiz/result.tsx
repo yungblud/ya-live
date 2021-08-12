@@ -4,8 +4,8 @@ import styles from './result.css';
 
 const ShowResult: React.FC<{ isResult: boolean; result: string }> = ({ isResult, result }) => {
   const imoji = isResult ? '🎊' : '💣';
-  const title = isResult ? '정답!' : '탈락';
-  const desc = isResult ? '다음 문제도 화이팅 ~' : '야라이브 진행은 계속 볼 수 있어요~';
+  const title = isResult ? 'Correct!' : 'Failed!';
+  const desc = isResult ? "You're good at quiz 😊" : 'Sorry! 🥲';
 
   return (
     <div className={styles.container}>
@@ -16,7 +16,7 @@ const ShowResult: React.FC<{ isResult: boolean; result: string }> = ({ isResult,
         <h1 className={clsx(styles.title, isResult ? styles.successTitle : styles.failTitle)}>
           {title}
         </h1>
-        {!isResult && '정답'}
+        {!isResult && 'Answer is'}
         <div className={styles.result}>{result}</div>
         <div className={styles.desc}>{desc}</div>
       </div>

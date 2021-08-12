@@ -248,7 +248,7 @@ async function calculateRound({
     return res.status(400).end();
   }
 
-  const resp = await quizOpsModel.saveDeadStatus({ festivalId: data.id });
+  const resp = await quizOpsModel.calculateGameScore({ festivalId: data.id });
   log('[calculateRound]: ', resp);
   if (resp === null) {
     return res.status(500).end();
