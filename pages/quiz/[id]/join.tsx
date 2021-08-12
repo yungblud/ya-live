@@ -103,6 +103,7 @@ const QuizJoin: NextPage<Props> = ({ id }) => {
                 join: DateTime.local().toISO(),
                 alive: true,
                 displayName: user.displayName === null ? 'empty' : user.displayName,
+                gameScore: 0,
               },
             });
             if (resp.status === 200 && resp.payload) {

@@ -34,6 +34,7 @@ const Prepare: React.FC = () => {
             join: DateTime.local().toISO(),
             alive: true,
             displayName: user?.displayName || 'empty',
+            gameScore: 0,
           },
         });
 

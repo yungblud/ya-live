@@ -10,4 +10,5 @@ export interface QuizParticipant {
   id: string;
   /** 사용자 출력 명 */
   displayName: string;
+  gameScore: number;
 }
