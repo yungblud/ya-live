@@ -29,6 +29,7 @@ const reduceData = splitTxt.reduce(
       ],
       quiz_correct_answer: parseInt(dotSplitTxt[5], 10),
       quiz_type: 'TEXT',
+      quiz_image: dotSplitTxt[6]
     };
     acc.data.push(nowQuiz);
     return acc;
@@ -45,4 +46,8 @@ const reduceData = splitTxt.reduce(
   },
 );
 
-console.log(JSON.stringify(reduceData.data));
+const prettified = JSON.stringify(reduceData.data, null, 4)
+
+console.log(prettified)
+
+fs.writeFileSync('./quiz_convert.json', prettified)

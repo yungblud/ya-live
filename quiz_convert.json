@@ -21,7 +21,8 @@
             }
         ],
         "quiz_correct_answer": 2,
-        "quiz_type": "TEXT"
+        "quiz_type": "TEXT",
+        "quiz_image": "https://i.imgur.com/WzQj6pe.jpeg"
     },
     {
         "quiz_id": "q01",
