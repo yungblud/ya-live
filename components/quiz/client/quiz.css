@@ -12,6 +12,7 @@
   transform: translateY(-50%);
   max-width: 90rem;
   margin: 0 auto;
+  height: calc(100vh - 65px);
 }
 
 .question {
