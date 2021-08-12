@@ -28,7 +28,7 @@ const reduceData = splitTxt.reduce(
         },
       ],
       quiz_correct_answer: parseInt(dotSplitTxt[5], 10),
-      quiz_type: 'TEXT',
+      quiz_type: dotSplitTxt[6] ? 'IMAGE' : 'TEXT',
       quiz_image_url: dotSplitTxt[6],
     };
     acc.data.push(nowQuiz);
