@@ -1,8 +1,9 @@
 import { Button, Divider, Layout, List, message } from 'antd';
 import { NextPage } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
+import ParticipantList from '@/components/hq/ParticipantList';
 import styles from '../../../components/login/login.css';
 import { useStoreDoc } from '../../../components/auth/hooks/firestore_hooks';
 import SlLayout from '../../../components/layout';
@@ -56,8 +57,20 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
   const [quizData, updateQuizData] = useState<QuizItem[]>();
   const [pubCorrectAnswerStatus, updatePubCorrectAnswerStatus] = useState(false);
   const [calWrongAnswerStatus, updateCalWrongAnswerStatus] = useState(false);
-  const [aliveParticipants, setAliveParticipants] = useState<QuizParticipant[]>([]);
+  const [allParticipants, setAllParticipants] = useState<QuizParticipant[]>([]);
   const { docValue: info } = useStoreDoc({ collectionPath: 'quiz', docPath: id });
+
+  useEffect(() => {
+    opsService
+      .getAllParticipantsInfo({
+        quiz_id: id,
+        info: {},
+        isServer: false,
+      })
+      .then((allParticipantsInfo) => {
+        setAllParticipants(allParticipantsInfo.payload ?? []);
+      });
+  }, [info]);
 
   const operationInfo: QuizOperation = (() => {
     if (info === undefined) {
@@ -168,19 +181,26 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
             }, 15000);
           }
           updateStatusChangeLoader(false);
-          if (mv.status === EN_QUIZ_STATUS.FINISH) {
-            const resp = await opsService.getAliveParticipantsInfo({
+          if (mv.status === EN_QUIZ_STATUS.PREPARE) {
+            await opsService.initializeGameScores({
               quiz_id: id,
               info: {},
               isServer: false,
             });
-            if (resp.payload) {
-              setAliveParticipants(resp.payload);
-            }
           }
-          if (mv.status === EN_QUIZ_STATUS.PREPARE) {
-            setAliveParticipants([]);
-          }
+          // if (mv.status === EN_QUIZ_STATUS.FINISH) {
+          //   const resp = await opsService.getAliveParticipantsInfo({
+          //     quiz_id: id,
+          //     info: {},
+          //     isServer: false,
+          //   });
+          //   if (resp.payload) {
+          //     setAliveParticipants(resp.payload);
+          //   }
+          // }
+          // if (mv.status === EN_QUIZ_STATUS.PREPARE) {
+          //   setAliveParticipants([]);
+          // }
         }}
       >
         {mv.title}
@@ -352,15 +372,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
           <>
             <div>현재상태 : {operationInfo.status}</div>
             <div>참가자 : {operationInfo.total_participants}</div>
-            <div>생존자 : {operationInfo.alive_participants}</div>
-            {operationInfo.status === EN_QUIZ_STATUS.FINISH && (
-              <div>
-                생존자 명단 :{' '}
-                {aliveParticipants?.map((user) => (
-                  <div key={user.id}>{user.displayName}</div>
-                ))}
-              </div>
-            )}
+            {/* <div>생존자 : {operationInfo.alive_participants}</div> */}
             <Divider />
             <div>{statusSwitch}</div>
             <Divider />
@@ -410,6 +422,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
                 퀴즈 불러오기
               </Button>
               {quizBank}
+              <ParticipantList participants={allParticipants} />
             </div>
           </>
         </Layout.Content>

@@ -1,9 +1,10 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/components/auth/hooks/auth_hooks';
 import Container from '@/components/common/Container';
 import ClientBody from '@/components/quiz/client/body';
 
+import ParticipantList from '@/components/hq/ParticipantList';
 import { QuizClientContext } from '../../../../context/quiz/client/QuizClientContext';
 import getStringValueFromQuery from '../../../../controllers/etc/get_value_from_query';
 import {
@@ -13,6 +14,7 @@ import {
 import { QuizOperation } from '../../../../models/quiz/interface/I_quiz_operation';
 import { QuizParticipant } from '../../../../models/quiz/interface/I_quiz_participant';
 import { EN_QUIZ_STATUS } from '../../../../models/quiz/interface/EN_QUIZ_STATUS';
+import * as opsService from '../../../../models/quiz/operation.client.service';
 
 interface QuizClientProps {
   quizID?: string;
@@ -21,6 +23,19 @@ interface QuizClientProps {
 
 const QuizClient: NextPage<QuizClientProps> = ({ quizID = '', userID = '' }) => {
   const { user } = useAuth();
+  const [allParticipants, setAllParticipants] = useState<QuizParticipant[]>([]);
+
+  // useEffect(() => {
+  //   opsService
+  //     .getAllParticipantsInfo({
+  //       quiz_id: quizID,
+  //       info: {},
+  //       isServer: false,
+  //     })
+  //     .then((allParticipantsInfo) => {
+  //       setAllParticipants(allParticipantsInfo.payload ?? []);
+  //     });
+  // }, []);
 
   const { docValue: quizFromStore } = useStoreDoc({
     collectionPath: 'quiz',
@@ -51,7 +66,12 @@ const QuizClient: NextPage<QuizClientProps> = ({ quizID = '', userID = '' }) => 
         name={name}
         isFixed={quiz?.status !== EN_QUIZ_STATUS.QUIZ && quiz?.status !== EN_QUIZ_STATUS.COUNTDOWN}
       >
-        <ClientBody />
+        <div style={{ flex: 1 }}>
+          <ClientBody />
+        </div>
+        {/* <div>
+          <ParticipantList participants={allParticipants} />
+        </div> */}
       </Container>
     </QuizClientContext.Provider>
   );

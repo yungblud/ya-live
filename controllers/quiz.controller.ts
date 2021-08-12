@@ -12,6 +12,43 @@ import memberModel from '../models/members/members.model';
 
 const log = debug('tjl:controller:quiz');
 
+async function initializeGameScore({
+  query,
+  res,
+}: {
+  query: NextApiRequest['query'];
+  res: NextApiResponse;
+}) {
+  const quizId = getStringValueFromQuery({ query, field: 'quiz_id' });
+  if (!quizId) {
+    return res.status(400).end();
+  }
+  const resp = await participantsModel.initializeGameScore({
+    quiz_id: quizId,
+  });
+  return res.json(resp);
+}
+
+async function getAllParticipants({
+  query,
+  res,
+}: {
+  query: NextApiRequest['query'];
+  res: NextApiResponse;
+}) {
+  const quizId = getStringValueFromQuery({ query, field: 'quiz_id' });
+  if (!quizId) {
+    return res.status(400).end();
+  }
+  const resp = await participantsModel.getAllParticipantsInfo({
+    quiz_id: quizId,
+  });
+  if (!!resp === false) {
+    return res.status(404).end();
+  }
+  return res.json(resp);
+}
+
 async function getAliveParticipants({
   query,
   res,
@@ -349,4 +386,6 @@ export default {
   reviveAllParticipants,
   initAliveUser,
   getAliveParticipants,
+  getAllParticipants,
+  initializeGameScore,
 };

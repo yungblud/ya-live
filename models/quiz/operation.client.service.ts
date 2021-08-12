@@ -3,6 +3,52 @@ import { getBaseUrl } from '../commons/utils/get_baseurl';
 import { QuizOperation, QuizItem } from './interface/I_quiz_operation';
 import { QuizParticipant } from './interface/I_quiz_participant';
 
+export async function initializeGameScores(args: {
+  quiz_id: string;
+  info: Partial<QuizOperation>;
+  isServer: boolean;
+}) {
+  const { isServer } = args;
+  const hostAndPort: string = getBaseUrl(isServer);
+  const url = `${hostAndPort}/api/quiz/${args.quiz_id}/participants/initialize`;
+  try {
+    const resp = await requester<QuizParticipant[] | null>({
+      option: {
+        url,
+        method: 'get',
+      },
+    });
+    return resp;
+  } catch (e) {
+    return {
+      status: 500,
+    };
+  }
+}
+
+export async function getAllParticipantsInfo(args: {
+  quiz_id: string;
+  info: Partial<QuizOperation>;
+  isServer: boolean;
+}) {
+  const { isServer } = args;
+  const hostAndPort: string = getBaseUrl(isServer);
+  const url = `${hostAndPort}/api/quiz/${args.quiz_id}/participants/all`;
+  try {
+    const resp = await requester<QuizParticipant[] | null>({
+      option: {
+        url,
+        method: 'get',
+      },
+    });
+    return resp;
+  } catch (e) {
+    return {
+      status: 500,
+    };
+  }
+}
+
 export async function getAliveParticipantsInfo(args: {
   quiz_id: string;
   info: Partial<QuizOperation>;
