@@ -1,8 +1,7 @@
 import { Button, Divider, Layout, List, message } from 'antd';
 import { NextPage } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import React, { useState, useEffect } from 'react';
-import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
+import React, { useState } from 'react';
 import ParticipantList from '@/components/hq/ParticipantList';
 import styles from '../../../components/login/login.css';
 import { useStoreDoc } from '../../../components/auth/hooks/firestore_hooks';
@@ -57,20 +56,7 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
   const [quizData, updateQuizData] = useState<QuizItem[]>();
   const [pubCorrectAnswerStatus, updatePubCorrectAnswerStatus] = useState(false);
   const [calWrongAnswerStatus, updateCalWrongAnswerStatus] = useState(false);
-  const [allParticipants, setAllParticipants] = useState<QuizParticipant[]>([]);
   const { docValue: info } = useStoreDoc({ collectionPath: 'quiz', docPath: id });
-
-  useEffect(() => {
-    opsService
-      .getAllParticipantsInfo({
-        quiz_id: id,
-        info: {},
-        isServer: false,
-      })
-      .then((allParticipantsInfo) => {
-        setAllParticipants(allParticipantsInfo.payload ?? []);
-      });
-  }, [info]);
 
   const operationInfo: QuizOperation = (() => {
     if (info === undefined) {
