@@ -168,11 +168,16 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
           }
           updateStatusChangeLoader(false);
           if (mv.status === EN_QUIZ_STATUS.PREPARE) {
-            await opsService.initializeGameScores({
+            await opsService.removeAllParticipants({
               quiz_id: id,
               info: {},
               isServer: false,
             });
+            // await opsService.initializeGameScores({
+            //   quiz_id: id,
+            //   info: {},
+            //   isServer: false,
+            // });
           }
           // if (mv.status === EN_QUIZ_STATUS.FINISH) {
           //   const resp = await opsService.getAliveParticipantsInfo({

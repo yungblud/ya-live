@@ -12,6 +12,23 @@ import memberModel from '../models/members/members.model';
 
 const log = debug('tjl:controller:quiz');
 
+async function removeAllParticipants({
+  query,
+  res,
+}: {
+  query: NextApiRequest['query'];
+  res: NextApiResponse;
+}) {
+  const quizId = getStringValueFromQuery({ query, field: 'quiz_id' });
+  if (!quizId) {
+    return res.status(400).end();
+  }
+  const resp = await participantsModel.removeAllParticipants({
+    quiz_id: quizId,
+  });
+  return res.json(resp);
+}
+
 async function initializeGameScore({
   query,
   res,
@@ -388,4 +405,5 @@ export default {
   getAliveParticipants,
   getAllParticipants,
   initializeGameScore,
+  removeAllParticipants,
 };

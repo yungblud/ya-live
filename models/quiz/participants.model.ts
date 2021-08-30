@@ -3,6 +3,22 @@ import { QuizOperation } from './interface/I_quiz_operation';
 import { QuizParticipant } from './interface/I_quiz_participant';
 import { EN_QUIZ_STATUS } from './interface/EN_QUIZ_STATUS';
 
+async function removeAllParticipants(args: { quiz_id: string }) {
+  const ref = FirebaseAdmin.getInstance()
+    .Firestore.collection('quiz')
+    .doc(args.quiz_id)
+    .collection('participants');
+
+  try {
+    const participants = (await ref.get()).docs;
+    const promises = participants.map((participant) => participant.ref.delete());
+    await Promise.all([...promises]);
+    return null;
+  } catch (err) {
+    return null;
+  }
+}
+
 async function initializeGameScore(args: { quiz_id: string }) {
   const ref = FirebaseAdmin.getInstance()
     .Firestore.collection('quiz')
@@ -129,4 +145,5 @@ export default {
   getAliveParticipantsInfo,
   getAllParticipantsInfo,
   initializeGameScore,
+  removeAllParticipants,
 };
