@@ -1,20 +1,20 @@
 What is our company’s official name?,Cochl.,Kochl,Coch1,CochI,1
 Who is the most recent employee?,Sooyeon,Jieun,Daniel,Sangmin,4
-According to our Medium article what is the Aesoo’s favorite food?Spam fried rice,Kimchi fried rice,Shrimp fried rice,Egg fried rice,2
+According to our Medium article what is the Aesoo’s favorite food?,Spam fried rice,Kimchi fried rice,Shrimp fried rice,Egg fried rice,2
 Who is Cochl’s CFO(Chief Furniture Officer)?,Jeongsoo,Yoonchang, Hyungui,Donmoon,3
 How many team members in Cochl?,25,26,27,28,1
 Which team members’ name and team are incorrectly matched?,Suyoung - Business,Daniel - Model,Ahyoung - Data,Thibault - Dev,2
 Which is not our targeted industry?,Surveillance,Entertainment,Education,Healthcare,3
 When is Cochl’s foundation day?,June 14th,June 24th,July 4th,July 14th,4
 Which of the following is not something we participated?,IEEE DCASE,Slush,Google Inception Award,Kaggle: General Purpose Audio Tagging,3
-How many sounds does Cochl support?,20,22,24,26,3
+How many sounds does Cochl support?,21,23,25,27,3
 Where Messi recently moved to?,FC Barcelona,FC Seoul,Paris Saint-Germain,Arsenal,3
 Which station is not included in subway Line 2?,Kkachisan,Magok,Silim,Wangshimni,2
 Which brands and products are not paired correctly?,Monami-ball pen,Espoir-bag,Enfant-Cheese,Mon cher tonton-Cookie,2
 Which musical instrument Sooyeon can play?,Drum,Cello,Flute,Organ,1
-Thomas travelled more than 4,000 kilometers by (blank). What should be in the blank?,Swimming,Running,Hitchhiking,Riding,3
+Thomas travelled more than 4000 kilometers by (blank). What should be in the blank?,Swimming,Running,Hitchhiking,Riding,3
 Simple TMI times! Which TMI and people are not correctly matched?,Il-Young: I can't eat malatang becaus of its taste,Junghye: I can eat all the foods in the world!,Hyemin:My left feet is bigger than the right one,Jeongsoo:My fingernails are born to be long,3
-Donmoon get his Jujitsu (blank) belt. Which color of the belt did he get?,Green,Brown,Blue,Purple,3
+Donmoon gets his Jujitsu (blank) belt. Which color of the belt did he get?,Green,Brown,Blue,Purple,3
 Subin has very special certificate. What kind of certificate did he has?,Baristar,Florist,Marriage counselor,Recreation coach,4
 Sooyeon once lived in (blank) city. Which city did she live?,Montreal,Vancouver,Toronto,Ottawa,1
 Who is Thibault?,Left,Middle,Right,There is no Thibault,3,https://i.imgur.com/TEZTxRC.jpg

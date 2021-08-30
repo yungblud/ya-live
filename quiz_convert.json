@@ -49,26 +49,26 @@
     },
     {
         "quiz_id": "q02",
-        "quiz_desc": "According to our Medium article what is the Aesoo’s favorite food?Spam fried rice",
+        "quiz_desc": "According to our Medium article what is the Aesoo’s favorite food?",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Kimchi fried rice"
+                "title": "Spam fried rice"
             },
             {
                 "no": 2,
-                "title": "Shrimp fried rice"
+                "title": "Kimchi fried rice"
             },
             {
                 "no": 3,
-                "title": "Egg fried rice"
+                "title": "Shrimp fried rice"
             },
             {
                 "no": 4,
-                "title": "2"
+                "title": "Egg fried rice"
             }
         ],
-        "quiz_correct_answer": null,
+        "quiz_correct_answer": 2,
         "quiz_type": "TEXT"
     },
     {
@@ -221,19 +221,19 @@
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "20"
+                "title": "21"
             },
             {
                 "no": 2,
-                "title": "22"
+                "title": "23"
             },
             {
                 "no": 3,
-                "title": "24"
+                "title": "25"
             },
             {
                 "no": 4,
-                "title": "26"
+                "title": "27"
             }
         ],
         "quiz_correct_answer": 3,
@@ -337,28 +337,27 @@
     },
     {
         "quiz_id": "q14",
-        "quiz_desc": "Thomas travelled more than 4",
+        "quiz_desc": "Thomas travelled more than 4000 kilometers by (blank). What should be in the blank?",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "000 kilometers by (blank). What should be in the blank?"
-            },
-            {
-                "no": 2,
                 "title": "Swimming"
             },
             {
-                "no": 3,
+                "no": 2,
                 "title": "Running"
             },
             {
-                "no": 4,
+                "no": 3,
                 "title": "Hitchhiking"
+            },
+            {
+                "no": 4,
+                "title": "Riding"
             }
         ],
-        "quiz_correct_answer": null,
-        "quiz_type": "IMAGE",
-        "quiz_image_url": "3"
+        "quiz_correct_answer": 3,
+        "quiz_type": "TEXT"
     },
     {
         "quiz_id": "q15",
@@ -386,7 +385,7 @@
     },
     {
         "quiz_id": "q16",
-        "quiz_desc": "Donmoon get his Jujitsu (blank) belt. Which color of the belt did he get?",
+        "quiz_desc": "Donmoon gets his Jujitsu (blank) belt. Which color of the belt did he get?",
         "quiz_selector": [
             {
                 "no": 1,
