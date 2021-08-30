@@ -8,12 +8,12 @@ const parsed = JSON.parse(text) as any[];
 
 const collectionRef = FirebaseAdmin.getInstance()
   .Firestore.collection('quiz')
-  .doc('dongho')
+  .doc('minseo')
   .collection('quiz_bank');
 
 const docRef = FirebaseAdmin.getInstance()
   .Firestore.collection('quiz')
-  .doc('dongho');
+  .doc('minseo');
 
 (async () => {
   // eslint-disable-next-line no-restricted-syntax

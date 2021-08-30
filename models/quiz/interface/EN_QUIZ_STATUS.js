@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.EN_QUIZ_STATUS = void 0;
 var EN_QUIZ_STATUS;
 (function (EN_QUIZ_STATUS) {

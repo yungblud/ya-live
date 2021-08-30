@@ -1,11 +1,11 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var debug_1 = require("debug");
 var admin = require("firebase-admin");
 var dotenv = require("dotenv");
 dotenv.config();
 var _a = process.env, projectId = _a.projectId, privateKey = _a.privateKey, clientEmail = _a.clientEmail, databaseurl = _a.databaseurl;
-var log = debug_1.default('tjl:models:firebaseadmin');
+var log = debug_1["default"]('tjl:models:firebaseadmin');
 var FirebaseAdmin = /** @class */ (function () {
     function FirebaseAdmin() {
         this.init = false;
@@ -49,16 +49,16 @@ var FirebaseAdmin = /** @class */ (function () {
             credential: {
                 privateKey: (privateKey || '').replace(/\\n/g, '\n'),
                 clientEmail: clientEmail || '',
-                projectId: projectId || '',
-            },
+                projectId: projectId || ''
+            }
         };
         admin.initializeApp({
             databaseURL: config.databaseurl,
-            credential: admin.credential.cert(config.credential),
+            credential: admin.credential.cert(config.credential)
         });
         log('bootstrap end');
         this.init = true;
     };
     return FirebaseAdmin;
 }());
-exports.default = FirebaseAdmin;
+exports["default"] = FirebaseAdmin;

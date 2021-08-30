@@ -17,7 +17,7 @@ Simple TMI times! Which TMI and people are not correctly matched?,Il-Young: I ca
 Donmoon get his Jujitsu (blank) belt. Which color of the belt did he get?,Green,Brown,Blue,Purple,3
 Subin has very special certificate. What kind of certificate did he has?,Baristar,Florist,Marriage counselor,Recreation coach,4
 Sooyeon once lived in (blank) city. Which city did she live?,Montreal,Vancouver,Toronto,Ottawa,1
-Who is Thibault?,Left,Middle,Right,There is no Thibault,3,https://imgur.com/TEZTxRC
-Which is not correctly matched?,1-Aesoo,2-Suyoung,3-Donmoon,4-Yoonchang,4,https://imgur.com/D0Xkh0p
-Which is correctly matched?,1-Benjamin,2-Jieun,3-Minseo,4-Subin,2,https://imgur.com/0LXDDrN
+Who is Thibault?,Left,Middle,Right,There is no Thibault,3,https://i.imgur.com/TEZTxRC.jpg
+Which is not correctly matched?,1-Aesoo,2-Suyoung,3-Donmoon,4-Yoonchang,4,https://i.imgur.com/D0Xkh0p.png
+Which is correctly matched?,1-Benjamin,2-Jieun,3-Minseo,4-Subin,2,https://i.imgur.com/0LXDDrN.png
 Our newest Notion page will be launched in next monday! Can you guess the domain address?,1-cochI.oopy.io,2-cochl.oopy.io,3-cochlear.oopy.io,4-cochl_exit_gazua.oopy.io,2

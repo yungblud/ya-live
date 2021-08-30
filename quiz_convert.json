@@ -479,7 +479,7 @@
         ],
         "quiz_correct_answer": 3,
         "quiz_type": "IMAGE",
-        "quiz_image_url": "https://imgur.com/TEZTxRC"
+        "quiz_image_url": "https://i.imgur.com/TEZTxRC.jpg"
     },
     {
         "quiz_id": "q20",
@@ -504,7 +504,7 @@
         ],
         "quiz_correct_answer": 4,
         "quiz_type": "IMAGE",
-        "quiz_image_url": "https://imgur.com/D0Xkh0p"
+        "quiz_image_url": "https://i.imgur.com/D0Xkh0p.png"
     },
     {
         "quiz_id": "q21",
@@ -529,7 +529,7 @@
         ],
         "quiz_correct_answer": 2,
         "quiz_type": "IMAGE",
-        "quiz_image_url": "https://imgur.com/0LXDDrN"
+        "quiz_image_url": "https://i.imgur.com/0LXDDrN.png"
     },
     {
         "quiz_id": "q22",
