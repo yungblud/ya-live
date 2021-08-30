@@ -15,11 +15,11 @@ const IndexPage: NextPage = () => {
         </Typography.Paragraph>
       </Typography>
       {haveUser ? (
-        <Button type="primary" href="/quiz/dongho/join">
+        <Button type="primary" href="/quiz/minseo/join">
           Let's Join!
         </Button>
       ) : (
-        <Button type="primary" href="/signin?redirect=/quiz/dongho/join">
+        <Button type="primary" href="/signin?redirect=/quiz/minseo/join">
           Login via google!
         </Button>
       )}
