@@ -1,9 +1,9 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
 import { animated, useSpring } from 'react-spring';
-import styles from './statistics.css';
 import { QuizContext } from '@/context/quiz/dashboard/QuizContext';
 import FirebaseAuthClient from '@/models/commons/firebase_auth_client.model';
 import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
+import styles from './statistics.css';
 
 interface StatisticsProps {
   active: boolean;
@@ -25,7 +25,7 @@ const Statistics: React.FC<StatisticsProps> = ({ active }) => {
       friction: 40,
       clamp: true,
     },
-    value: survivorCount,
+    value: survivorCount ?? 0,
   });
 
   const containerStyle = useSpring({
@@ -73,7 +73,7 @@ const Statistics: React.FC<StatisticsProps> = ({ active }) => {
       return (
         <>
           <animated.p className={styles.survivorCount}>
-            {value.interpolate((x) => Math.round(x))}
+            {value.interpolate((x) => Math.round(x as any))}
           </animated.p>
           <p className={deathCount > 0 ? styles.deathCount : styles.revivalCount}>
             {deathCount > 0 ? '-' : '+'}
