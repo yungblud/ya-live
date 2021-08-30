@@ -9,7 +9,6 @@ import Finish from './finish';
 
 const ClientBody: React.FC = () => {
   const ctx = useContext(QuizClientContext);
-
   return (() => {
     switch (ctx.quiz?.status) {
       case EN_QUIZ_STATUS.IDLE:

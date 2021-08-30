@@ -1,13 +1,20 @@
 import React from 'react';
+import ParticipantList from '@/components/hq/ParticipantList';
 import styles from './finish.css';
 
 const Finish: React.FC = () => (
   <div className={styles.container}>
     <div className={styles.yalive}>cochl live</div>
-    참여해주셔서 감사합니다.
+    Thanks a lot!
     <span role="img" aria-label="">
       💫
     </span>
+    <br />
+    <ParticipantList
+      quizId="minseo"
+      buttonTitle="Who's the best player?"
+      listTitle="Best player list"
+    />
   </div>
 );
 

@@ -8,7 +8,7 @@ interface Props {
   quizId: string;
 }
 
-const ParticipantList: FC<Props> = ({ shouldUpdate, quizId }) => {
+export const ParticipantList: FC<Props> = ({ shouldUpdate, quizId }) => {
   const [participants, setParticipants] = useState<QuizParticipant[]>([]);
   const updateParticipantList = () => {
     opsService
@@ -34,11 +34,19 @@ const ParticipantList: FC<Props> = ({ shouldUpdate, quizId }) => {
       pagination={{
         pageSize: 5,
       }}
-      dataSource={participants}
-      renderItem={(item) => (
+      dataSource={participants.sort((a, b) => {
+        if (a.gameScore < b.gameScore) {
+          return 1;
+        }
+        if (a.gameScore > b.gameScore) {
+          return -1;
+        }
+        return 0;
+      })}
+      renderItem={(item, index) => (
         <List.Item>
           <List.Item.Meta
-            title={item.displayName}
+            title={`${index + 1}. ${item.displayName}`}
             description={
               typeof item.gameScore !== 'number' || item.gameScore <= 0
                 ? '0 point'
@@ -53,21 +61,23 @@ const ParticipantList: FC<Props> = ({ shouldUpdate, quizId }) => {
 
 interface PopoverProps {
   quizId: string;
+  buttonTitle?: string;
+  listTitle?: string;
 }
 
-const ListPopOver: FC<PopoverProps> = ({ quizId }) => {
+const ListPopOver: FC<PopoverProps> = ({ quizId, buttonTitle, listTitle }) => {
   const [visible, setVisible] = useState(false);
   return (
     <Popover
       trigger="click"
-      title="Participant List"
+      title={listTitle ?? 'Participant List'}
       visible={visible}
       onVisibleChange={(changedVisible) => {
         setVisible(changedVisible);
       }}
       content={<ParticipantList shouldUpdate={visible} quizId={quizId} />}
     >
-      <Button type="primary">Show Participants</Button>
+      <Button type="primary">{buttonTitle ?? 'Show Participants'}</Button>
     </Popover>
   );
 };
