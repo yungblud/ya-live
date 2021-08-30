@@ -60,15 +60,16 @@ const Prepare: React.FC = () => {
   const prepareEle = (
     <>
       <div className={styles.descBox}>
-        <span className={styles.desc}>잠시 후에 시작합니다!</span>
+        <span className={styles.desc}>Quiz will be started soon!!</span>
       </div>
       <b>{email}</b>
       <div className={styles.logoutBox}>
-        계정을 변경하시려면
+        If you want to switch your account
+        <br />
+        Click
         <Button className={styles.logoutBtn} ghost onClick={onClickSignOut}>
-          여기
+          Here
         </Button>
-        를 클릭해주세요.
       </div>
     </>
   );

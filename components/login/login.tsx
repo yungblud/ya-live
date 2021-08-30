@@ -56,7 +56,7 @@ const Login: React.FC<{ quizID: string }> = ({ quizID }) => {
             </span>
           </span>
           <div className={styles.loginDesc}>
-            참여하고 싶다면
+            If you wanna join,
             <Button className={styles.loginBtn} onClick={onClickSignIn}>
               login
             </Button>

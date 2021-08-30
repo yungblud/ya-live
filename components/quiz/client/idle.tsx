@@ -9,7 +9,7 @@ const Idle: React.FC<{ isAlive: boolean }> = () => (
     onTouchMove={(e) => e.preventDefault()}
   >
     <span className={styles.text}>
-      다음 문제가 곧 시작됩니다!
+      The next quiz will be up soon!
       <span role="img" aria-label="ㅇ_ㅇ">
         👀
       </span>

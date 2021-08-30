@@ -12,11 +12,11 @@ const getCaption = (status: EN_QUIZ_STATUS): string => {
   switch (status) {
     case EN_QUIZ_STATUS.COUNTDOWN:
     case EN_QUIZ_STATUS.CALCULATE:
-      return '집계 중...';
+      return 'Calculating...';
     case EN_QUIZ_STATUS.FINISH:
-      return '(대충 끝났다는 말)';
+      return '(finished... 😀)';
     default:
-      return '잠시 후에 시작합니다!';
+      return 'Will be started soon!';
   }
 };
 
