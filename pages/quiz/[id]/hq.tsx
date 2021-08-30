@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import React, { useState } from 'react';
 import ParticipantList from '@/components/hq/ParticipantList';
+import { EN_QUIZ_TYPE } from '@/models/quiz/interface/EN_QUIZ_TYPE';
 import styles from '../../../components/login/login.css';
 import { useStoreDoc } from '../../../components/auth/hooks/firestore_hooks';
 import SlLayout from '../../../components/layout';
@@ -86,10 +87,11 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
     message.info(`퀴즈 정보 반영 상태 : ${resp.status}`);
   }
 
-  async function calWrongAnswer() {
+  async function calWrongAnswer({ quizScore }: { quizScore: number }) {
     const resp = await opsService.calculateQuizRound({
       festivalId: id,
       isServer: false,
+      quizScore,
     });
     if (resp === null) {
       message.warn('정산 실패!!!');
@@ -157,7 +159,13 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
                 updateCalWrongAnswerStatus(false);
 
                 await pubQuizAnswer();
-                await calWrongAnswer();
+                let quizScore = 10;
+                if (operationInfo.quiz_type === EN_QUIZ_TYPE.IMAGE) {
+                  quizScore = 20;
+                }
+                await calWrongAnswer({
+                  quizScore,
+                });
 
                 updateStatusChangeLoader(false);
               } catch (err) {
@@ -285,11 +293,15 @@ const QuizHeadQuarter: NextPage<Props> = ({ id }) => {
   // 정답자를 카운트한다.
   const calCorrectAnswer = (() => {
     if (operationInfo.status === EN_QUIZ_STATUS.CALCULATE && operationInfo.quiz_id) {
+      let quizScore = 10;
+      if (operationInfo.quiz_type === EN_QUIZ_TYPE.IMAGE) {
+        quizScore = 20;
+      }
       return (
         <Button
           disabled={!(pubCorrectAnswerStatus === true && calWrongAnswerStatus === false)}
           type="primary"
-          onClick={calWrongAnswer}
+          onClick={() => calWrongAnswer({ quizScore })}
         >
           오답자 계산
         </Button>

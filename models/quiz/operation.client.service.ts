@@ -186,10 +186,14 @@ export async function updateQuiz(args: {
 }
 
 /** 퀴즈가 끝나면, 탈락자 처리를 진행한다. */
-export async function calculateQuizRound(args: { festivalId: string; isServer: boolean }) {
+export async function calculateQuizRound(args: {
+  festivalId: string;
+  isServer: boolean;
+  quizScore: number;
+}) {
   const { isServer } = args;
   const hostAndPort: string = getBaseUrl(isServer);
-  const url = `${hostAndPort}/api/quiz/${args.festivalId}/calculate`;
+  const url = `${hostAndPort}/api/quiz/${args.festivalId}/calculate?quizScore=${args.quizScore}`;
 
   try {
     const resp = await requester<QuizOperation | null>({

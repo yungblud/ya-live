@@ -290,6 +290,7 @@ async function calculateRound({
   res: NextApiResponse;
 }) {
   const festivalId = getStringValueFromQuery({ query, field: 'quiz_id' });
+  const quizScore = getStringValueFromQuery({ query, field: 'quizScore' });
   if (festivalId === undefined) {
     return res.status(400).end();
   }
@@ -302,7 +303,10 @@ async function calculateRound({
     return res.status(400).end();
   }
 
-  const resp = await quizOpsModel.calculateGameScore({ festivalId: data.id });
+  const resp = await quizOpsModel.calculateGameScore({
+    festivalId: data.id,
+    quizScore: typeof quizScore !== 'undefined' ? +quizScore : 10,
+  });
   log('[calculateRound]: ', resp);
   if (resp === null) {
     return res.status(500).end();

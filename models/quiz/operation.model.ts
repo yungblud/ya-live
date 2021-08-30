@@ -116,7 +116,13 @@ async function updateQuiz({
   }
 }
 
-async function calculateGameScore({ festivalId }: { festivalId: string }) {
+async function calculateGameScore({
+  festivalId,
+  quizScore,
+}: {
+  festivalId: string;
+  quizScore: number;
+}) {
   try {
     const festivalSnap = await FirebaseAdmin.getInstance()
       .Firestore.collection('quiz')
@@ -142,7 +148,7 @@ async function calculateGameScore({ festivalId }: { festivalId: string }) {
     //   deadParticipant.ref.update({ alive: false }),
     // );
     const aliveRequests = aliveParticipants.map((aliveParticipant) =>
-      aliveParticipant.ref.update({ gameScore: aliveParticipant.get('gameScore') + 10 }),
+      aliveParticipant.ref.update({ gameScore: aliveParticipant.get('gameScore') + quizScore }),
     );
     await Promise.all([...aliveRequests]);
 
