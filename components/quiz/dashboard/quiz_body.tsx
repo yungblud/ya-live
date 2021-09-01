@@ -3,6 +3,7 @@ import { QuizContext } from '@/context/quiz/dashboard/QuizContext';
 import { EN_QUIZ_STATUS } from '@/models/quiz/interface/EN_QUIZ_STATUS';
 import FirebaseAuthClient from '@/models/commons/firebase_auth_client.model';
 import { QuizParticipant } from '@/models/quiz/interface/I_quiz_participant';
+import { EN_QUIZ_TYPE } from '@/models/quiz/interface/EN_QUIZ_TYPE';
 import Cover from './cover';
 import styles from './quiz_body.css';
 import QuizDesc from './quiz_desc';
@@ -106,6 +107,9 @@ const QuizBody: React.FC = () => {
       />
       <div className={styles.wrap}>
         <QuizDesc />
+        {quiz.quiz_type === EN_QUIZ_TYPE.IMAGE && (
+          <img className={styles.imgEx} src={quiz.quiz_image_url} alt="" />
+        )}
         {quiz.quiz_selector && (
           <Selectors
             answers={answers}

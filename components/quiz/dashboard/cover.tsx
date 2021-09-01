@@ -14,7 +14,7 @@ const getCaption = (status: EN_QUIZ_STATUS): string => {
     case EN_QUIZ_STATUS.CALCULATE:
       return 'Calculating...';
     case EN_QUIZ_STATUS.FINISH:
-      return '(finished... 😀)';
+      return '(thanks for joining...! 😀)';
     default:
       return 'Will be started soon!';
   }

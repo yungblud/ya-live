@@ -58,40 +58,58 @@ const Statistics: React.FC<StatisticsProps> = ({ active }) => {
     })();
   }, [id, quiz.alive_participants]);
 
-  const heading = (() => {
-    if (quiz.alive_participants > SURVIVOR_THRESHOLD) {
-      return '생존자';
-    }
-    if (quiz.alive_participants > 1) {
-      return `최후의 ${quiz.alive_participants}인!`;
-    }
-    return '🔔 최후의 1인 🔔';
-  })();
+  const heading = (() => 'Top 3 Rankers')();
+  // if (quiz.alive_participants > SURVIVOR_THRESHOLD) {
+  //   return '생존자';
+  // }
+  // if (quiz.alive_participants > 1) {
+  //   return `최후의 ${quiz.alive_participants}인!`;
+  // }
+  // return '🔔 최후의 1인 🔔';
 
   const survivorEl = (() => {
-    if (quiz.alive_participants > SURVIVOR_THRESHOLD) {
-      return (
-        <>
-          <animated.p className={styles.survivorCount}>
-            {value.interpolate((x) => Math.round(x as any))}
-          </animated.p>
-          <p className={deathCount > 0 ? styles.deathCount : styles.revivalCount}>
-            {deathCount > 0 ? '-' : '+'}
-            {Math.abs(deathCount)}
+    const sortedSurvivors = survivors.sort((a, b) => {
+      if (a.gameScore > b.gameScore) {
+        return -1;
+      }
+      if (a.gameScore < b.gameScore) {
+        return 1;
+      }
+      return 0;
+    });
+
+    return (
+      <div className={styles.survivorNames}>
+        {sortedSurvivors.slice(0, 3).map((survivor, index) => (
+          <p key={survivor.id || index}>
+            {survivor.displayName.split('_')[0]}: {survivor.gameScore} point
           </p>
-        </>
-      );
-    }
-    if (quiz.alive_participants > 1) {
-      return (
-        <div className={styles.survivorNames}>
-          {survivors.slice(0, quiz.alive_participants).map((survivor, index) => (
-            <p key={survivor.id || index}>{survivor.displayName.split('_')[0]}</p>
-          ))}
-        </div>
-      );
-    }
-    return <p className={styles.lastSurvivor}>{survivors[0]?.displayName.split('_')[0]}</p>;
+        ))}
+      </div>
+    );
+    // if (quiz.alive_participants > SURVIVOR_THRESHOLD) {
+    //   return (
+    //     <>
+    //       <animated.p className={styles.survivorCount}>
+    //         {value.interpolate((x) => Math.round(x as any))}
+    //       </animated.p>
+    //       <p className={deathCount > 0 ? styles.deathCount : styles.revivalCount}>
+    //         {deathCount > 0 ? '-' : '+'}
+    //         {Math.abs(deathCount)}
+    //       </p>
+    //     </>
+    //   );
+    // }
+    // if (quiz.alive_participants > 1) {
+    //   return (
+    //     <div className={styles.survivorNames}>
+    //       {survivors.slice(0, quiz.alive_participants).map((survivor, index) => (
+    //         <p key={survivor.id || index}>{survivor.displayName.split('_')[0]}</p>
+    //       ))}
+    //     </div>
+    //   );
+    // }
+    // return <p className={styles.lastSurvivor}>{survivors[0]?.displayName.split('_')[0]}</p>;
   })();
 
   return (
