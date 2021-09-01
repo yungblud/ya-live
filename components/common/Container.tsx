@@ -8,7 +8,7 @@ const Container: React.FC<{
   isFixed?: boolean;
   showParticipants?: boolean;
   quizId?: string;
-}> = ({ name, isFixed, children, showParticipants, quizId }) => (
+}> = ({ isFixed, children, showParticipants, quizId }) => (
   <div className={clsx(styles.container, isFixed && styles.fixedContainer)}>
     <div className={styles.heading}>
       <p className={styles.logo}>cochl live</p>
