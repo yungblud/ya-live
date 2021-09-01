@@ -12,7 +12,7 @@ const Container: React.FC<{
   <div className={clsx(styles.container, isFixed && styles.fixedContainer)}>
     <div className={styles.heading}>
       <p className={styles.logo}>cochl live</p>
-      {name && <p className={styles.name}>{name}</p>}
+      {/* {name && <p className={styles.name}>{name}</p>} */}
       {showParticipants && quizId && (
         <div style={{ marginLeft: 50 }}>
           <ParticipantList quizId={quizId} />

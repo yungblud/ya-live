@@ -77,7 +77,15 @@ const ListPopOver: FC<PopoverProps> = ({ quizId, buttonTitle, listTitle }) => {
       }}
       content={<ParticipantList shouldUpdate={visible} quizId={quizId} />}
     >
-      <Button type="primary">{buttonTitle ?? 'Show Participants'}</Button>
+      <Button
+        type="primary"
+        size="small"
+        style={{
+          fontSize: 10,
+        }}
+      >
+        {buttonTitle ?? 'Show Participants'}
+      </Button>
     </Popover>
   );
 };
