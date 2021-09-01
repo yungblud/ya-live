@@ -14,19 +14,19 @@ const SURVIVOR_THRESHOLD = 5;
 const Statistics: React.FC<StatisticsProps> = ({ active }) => {
   const { id, quiz } = useContext(QuizContext);
   const [survivors, setSurvivors] = useState<QuizParticipant[]>([]);
-  const [survivorCount, setSurvivorCount] = useState(quiz.alive_participants);
-  const [deathCount, setDeathCount] = useState(0);
+  const [, setSurvivorCount] = useState(quiz.alive_participants);
+  const [, setDeathCount] = useState(0);
 
   const prevSurvivorCount = useRef(quiz.total_participants);
 
-  const { value } = useSpring({
-    config: {
-      tension: 75,
-      friction: 40,
-      clamp: true,
-    },
-    value: survivorCount ?? 0,
-  });
+  // const { value } = useSpring({
+  //   config: {
+  //     tension: 75,
+  //     friction: 40,
+  //     clamp: true,
+  //   },
+  //   value: survivorCount ?? 0,
+  // });
 
   const containerStyle = useSpring({
     opacity: active ? 1 : 0,
