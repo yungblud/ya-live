@@ -5,9 +5,9 @@ import debug from 'debug';
 import firebaseApp from 'firebase/app';
 
 const config = {
-  projectId: 'ya-live',
+  projectId: 'ya-live-1e7b2',
   apiKey: 'AIzaSyAGfGzXdcLvA-zhH_r0aUZkp7nj2v3O-4E',
-  authDomain: 'ya-live.vercel.app',
+  authDomain: 'ya-live-1e7b2.firebaseapp.com',
 };
 
 const log = debug('tjl:models:firebase_auth_client');
