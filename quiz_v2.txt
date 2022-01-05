@@ -1,23 +1,13 @@
-What is our company’s official name?,Cochl.,Kochl,Coch1,CochI,1
-Who is the most recent employee?,Sooyeon,Jieun,Daniel,Sangmin,4
-According to our Medium article what is the Aesoo’s favorite food?,Spam fried rice,Kimchi fried rice,Shrimp fried rice,Egg fried rice,2
-Who is Cochl’s CFO(Chief Furniture Officer)?,Jeongsoo,Yoonchang, Hyungui,Donmoon,3
-How many team members in Cochl?,25,26,27,28,1
-Which team members’ name and team are incorrectly matched?,Suyoung - Business,Daniel - Model,Ahyoung - Data,Thibault - Dev,2
-Which is not our targeted industry?,Surveillance,Entertainment,Education,Healthcare,3
-When is Cochl’s foundation day?,June 14th,June 24th,July 4th,July 14th,4
-Which of the following is not something we participated?,IEEE DCASE,Slush,Google Inception Award,Kaggle: General Purpose Audio Tagging,3
-How many sounds does Cochl support?,21,23,25,27,3
-Where Messi recently moved to?,FC Barcelona,FC Seoul,Paris Saint-Germain,Arsenal,3
-Which station is not included in subway Line 2?,Kkachisan,Magok,Silim,Wangshimni,2
-Which brands and products are not paired correctly?,Monami-ball pen,Espoir-bag,Enfant-Cheese,Mon cher tonton-Cookie,2
-Which musical instrument Sooyeon can play?,Drum,Cello,Flute,Organ,1
-Thomas travelled more than 4000 kilometers by (blank). What should be in the blank?,Swimming,Running,Hitchhiking,Riding,3
-Simple TMI times! Which TMI and people are not correctly matched?,Il-Young: I can't eat malatang becaus of its taste,Junghye: I can eat all the foods in the world!,Hyemin:My left feet is bigger than the right one,Jeongsoo:My fingernails are born to be long,3
-Donmoon gets his Jujitsu (blank) belt. Which color of the belt did he get?,Green,Brown,Blue,Purple,3
-Subin has very special certificate. What kind of certificate did he has?,Baristar,Florist,Marriage counselor,Recreation coach,4
-Sooyeon once lived in (blank) city. Which city did she live?,Montreal,Vancouver,Toronto,Ottawa,1
-Who is Thibault?,Left,Middle,Right,There is no Thibault,3,https://i.imgur.com/TEZTxRC.jpg
-Which is not correctly matched?,1-Aesoo,2-Suyoung,3-Donmoon,4-Yoonchang,4,https://i.imgur.com/D0Xkh0p.png
-Which is correctly matched?,1-Benjamin,2-Jieun,3-Minseo,4-Subin,2,https://i.imgur.com/0LXDDrN.png
-Our newest Notion page will be launched in next monday! Can you guess the domain address?,1-cochI.oopy.io,2-cochl.oopy.io,3-cochlear.oopy.io,4-cochl_exit_gazua.oopy.io,2
+Who is the main character in the picture, Na Yeon, Hyun Gui, Ha Lim, Ha Im, 4, https://imgur.com/6L841Z4
+When is the Cochl's foundation anniversary, 1 Jan, 24 Jan, 14 Jul, 24 Dec, 3
+Who is brewing the coffee sometimes for us, Sooyeon, Suyoung, SangMin, IlYoung, 3, https://imgur.com/3dSwePX
+What is the address of Cochl's US branch, 1600 Amhitheatre Parkway Mountain View, 1 infinite Loop City Cupertino, 3003 N. 1st Street San Jose, 75 East Snata Clara Street San Jose, 1
+What is the name of our office building, Iksung, MDM, Samsung, lksung, 1
+Which city is the Benjamin's hometown, Toulouse, Nice, Lyon, Bordeaux, 3
+Who is the COO of Cochl, Yoonchang, Jeongsoo, Subin, Donmoon, 3
+What is Minseo's favorite hobby, Volleyball, Basketball, Dodgeball, Baseball, 2
+What is the reulst of adding all the values - Numbere of Munseong's cats + Number of Cochl's co founders + Number of French, 11, 12, 13, 14, 3
+What is the Junghye's favorite restaurants for lunch, Halal Guys, Jilhal Bros, Five Guys, Woowa Bros, 2
+Guess whose remote working environment it is, HyoJeong, Jieun, Hyemin, Jeongsoo, 4, https://imgur.com/0rl9AA5
+Which food is Vihn addicteed to eating for the whole week, Egg, Egg plant, Potato, Sweet Potato, 1
+What is Seonghyeon's MBTI, INTP, INFP, ISFP, ISTP, 3
