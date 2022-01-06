@@ -1,13 +1,13 @@
-Who is the main character in the picture, Na Yeon, Hyun Gui, Ha Lim, Ha Im, 4, https://imgur.com/6L841Z4
-When is the Cochl's foundation anniversary, 1 Jan, 24 Jan, 14 Jul, 24 Dec, 3
-Who is brewing the coffee sometimes for us, Sooyeon, Suyoung, SangMin, IlYoung, 3, https://imgur.com/3dSwePX
-What is the address of Cochl's US branch, 1600 Amhitheatre Parkway Mountain View, 1 infinite Loop City Cupertino, 3003 N. 1st Street San Jose, 75 East Snata Clara Street San Jose, 3
-What is the name of our office building, Iksung, MDM, Samsung, lksung, 1
-Which city is the Benjamin's hometown, Toulouse, Nice, Lyon, Bordeaux, 3
-Who is the COO of Cochl, Yoonchang, Jeongsoo, Subin, Donmoon, 3
-What is Minseo's favorite hobby, Volleyball, Basketball, Dodgeball, Baseball, 2
-What is the reulst of adding all the values - Numbere of Munseong's cats + Number of Cochl's co founders + Number of French, 11, 12, 13, 14, 3
-What is the Junghye's favorite restaurants for lunch, Halal Guys, Jilhal Bros, Five Guys, Woowa Bros, 2
-Guess whose remote working environment it is, HyoJeong, Jieun, Hyemin, Jeongsoo, 4, https://imgur.com/0rl9AA5
-Which food is Vihn addicteed to eating for the whole week, Egg, Egg plant, Potato, Sweet Potato, 1
-What is Seonghyeon's MBTI, INTP, INFP, ISFP, ISTP, 3
+Who is the main character in the picture,Na Yeon,Hyun Gui,Ha Lim,Ha Im,4,https://imgur.com/6L841Z4
+When is the Cochl's foundation anniversary,1 Jan,24 Jan,14 Jul,24 Dec,3
+Who is brewing the coffee sometimes for us,Sooyeon,Suyoung,SangMin,IlYoung,3,https://imgur.com/3dSwePX
+What is the address of Cochl's US branch,1600 Amhitheatre Parkway Mountain View,1 infinite Loop City Cupertino,3003 N. 1st Street San Jose,75 East Snata Clara Street San Jose,3
+What is the name of our office building,Iksung,MDM,Samsung,lksung,1
+Which city is the Benjamin's hometown,Toulouse,Nice,Lyon,Bordeaux,3
+Who is the COO of Cochl,Yoonchang,Jeongsoo,Subin,Donmoon,3
+What is Minseo's favorite hobby,Volleyball,Basketball,Dodgeball,Baseball,2
+What is the reulst of adding all the values - Numbere of Munseong's cats + Number of Cochl's co founders + Number of French,11,12,13,14,3
+What is the Junghye's favorite restaurants for lunch,Halal Guys,Jilhal Bros,Five Guys,Woowa Bros,2
+Guess whose remote working environment it is,HyoJeong,Jieun,Hyemin,Jeongsoo,4,https://imgur.com/0rl9AA5
+Which food is Vihn addicteed to eating for the whole week,Egg,Egg plant,Potato,Sweet Potato,1
+What is Seonghyeon's MBTI,INTP,INFP,ISFP,ISTP, 3

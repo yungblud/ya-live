@@ -1,31 +1,56 @@
 [
     {
         "quiz_id": "q00",
-        "quiz_desc": "What is our company’s official name?",
+        "quiz_desc": "Who is the main character in the picture",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Cochl."
+                "title": "Na Yeon"
             },
             {
                 "no": 2,
-                "title": "Kochl"
+                "title": "Hyun Gui"
             },
             {
                 "no": 3,
-                "title": "Coch1"
+                "title": "Ha Lim"
             },
             {
                 "no": 4,
-                "title": "CochI"
+                "title": "Ha Im"
             }
         ],
-        "quiz_correct_answer": 1,
-        "quiz_type": "TEXT"
+        "quiz_correct_answer": 4,
+        "quiz_type": "IMAGE",
+        "quiz_image_url": "https://imgur.com/6L841Z4"
     },
     {
         "quiz_id": "q01",
-        "quiz_desc": "Who is the most recent employee?",
+        "quiz_desc": "When is the Cochl's foundation anniversary",
+        "quiz_selector": [
+            {
+                "no": 1,
+                "title": "1 Jan"
+            },
+            {
+                "no": 2,
+                "title": "24 Jan"
+            },
+            {
+                "no": 3,
+                "title": "14 Jul"
+            },
+            {
+                "no": 4,
+                "title": "24 Dec"
+            }
+        ],
+        "quiz_correct_answer": 3,
+        "quiz_type": "TEXT"
+    },
+    {
+        "quiz_id": "q02",
+        "quiz_desc": "Who is brewing the coffee sometimes for us",
         "quiz_selector": [
             {
                 "no": 1,
@@ -33,59 +58,108 @@
             },
             {
                 "no": 2,
-                "title": "Jieun"
+                "title": "Suyoung"
             },
             {
                 "no": 3,
-                "title": "Daniel"
+                "title": "SangMin"
             },
             {
                 "no": 4,
-                "title": "Sangmin"
+                "title": "IlYoung"
             }
         ],
-        "quiz_correct_answer": 4,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q02",
-        "quiz_desc": "According to our Medium article what is the Aesoo’s favorite food?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Spam fried rice"
-            },
-            {
-                "no": 2,
-                "title": "Kimchi fried rice"
-            },
-            {
-                "no": 3,
-                "title": "Shrimp fried rice"
-            },
-            {
-                "no": 4,
-                "title": "Egg fried rice"
-            }
-        ],
-        "quiz_correct_answer": 2,
-        "quiz_type": "TEXT"
+        "quiz_correct_answer": 3,
+        "quiz_type": "IMAGE",
+        "quiz_image_url": "https://imgur.com/3dSwePX"
     },
     {
         "quiz_id": "q03",
-        "quiz_desc": "Who is Cochl’s CFO(Chief Furniture Officer)?",
+        "quiz_desc": "What is the address of Cochl's US branch",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Jeongsoo"
+                "title": "1600 Amhitheatre Parkway Mountain View"
             },
             {
                 "no": 2,
-                "title": "Yoonchang"
+                "title": "1 infinite Loop City Cupertino"
             },
             {
                 "no": 3,
-                "title": " Hyungui"
+                "title": "3003 N. 1st Street San Jose"
+            },
+            {
+                "no": 4,
+                "title": "75 East Snata Clara Street San Jose"
+            }
+        ],
+        "quiz_correct_answer": 3,
+        "quiz_type": "TEXT"
+    },
+    {
+        "quiz_id": "q04",
+        "quiz_desc": "What is the name of our office building",
+        "quiz_selector": [
+            {
+                "no": 1,
+                "title": "Iksung"
+            },
+            {
+                "no": 2,
+                "title": "MDM"
+            },
+            {
+                "no": 3,
+                "title": "Samsung"
+            },
+            {
+                "no": 4,
+                "title": "lksung"
+            }
+        ],
+        "quiz_correct_answer": 1,
+        "quiz_type": "TEXT"
+    },
+    {
+        "quiz_id": "q05",
+        "quiz_desc": "Which city is the Benjamin's hometown",
+        "quiz_selector": [
+            {
+                "no": 1,
+                "title": "Toulouse"
+            },
+            {
+                "no": 2,
+                "title": "Nice"
+            },
+            {
+                "no": 3,
+                "title": "Lyon"
+            },
+            {
+                "no": 4,
+                "title": "Bordeaux"
+            }
+        ],
+        "quiz_correct_answer": 3,
+        "quiz_type": "TEXT"
+    },
+    {
+        "quiz_id": "q06",
+        "quiz_desc": "Who is the COO of Cochl",
+        "quiz_selector": [
+            {
+                "no": 1,
+                "title": "Yoonchang"
+            },
+            {
+                "no": 2,
+                "title": "Jeongsoo"
+            },
+            {
+                "no": 3,
+                "title": "Subin"
             },
             {
                 "no": 4,
@@ -96,120 +170,48 @@
         "quiz_type": "TEXT"
     },
     {
-        "quiz_id": "q04",
-        "quiz_desc": "How many team members in Cochl?",
+        "quiz_id": "q07",
+        "quiz_desc": "What is Minseo's favorite hobby",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "25"
+                "title": "Volleyball"
             },
             {
                 "no": 2,
-                "title": "26"
+                "title": "Basketball"
             },
             {
                 "no": 3,
-                "title": "27"
+                "title": "Dodgeball"
             },
             {
                 "no": 4,
-                "title": "28"
-            }
-        ],
-        "quiz_correct_answer": 1,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q05",
-        "quiz_desc": "Which team members’ name and team are incorrectly matched?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Suyoung - Business"
-            },
-            {
-                "no": 2,
-                "title": "Daniel - Model"
-            },
-            {
-                "no": 3,
-                "title": "Ahyoung - Data"
-            },
-            {
-                "no": 4,
-                "title": "Thibault - Dev"
+                "title": "Baseball"
             }
         ],
         "quiz_correct_answer": 2,
         "quiz_type": "TEXT"
     },
     {
-        "quiz_id": "q06",
-        "quiz_desc": "Which is not our targeted industry?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Surveillance"
-            },
-            {
-                "no": 2,
-                "title": "Entertainment"
-            },
-            {
-                "no": 3,
-                "title": "Education"
-            },
-            {
-                "no": 4,
-                "title": "Healthcare"
-            }
-        ],
-        "quiz_correct_answer": 3,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q07",
-        "quiz_desc": "When is Cochl’s foundation day?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "June 14th"
-            },
-            {
-                "no": 2,
-                "title": "June 24th"
-            },
-            {
-                "no": 3,
-                "title": "July 4th"
-            },
-            {
-                "no": 4,
-                "title": "July 14th"
-            }
-        ],
-        "quiz_correct_answer": 4,
-        "quiz_type": "TEXT"
-    },
-    {
         "quiz_id": "q08",
-        "quiz_desc": "Which of the following is not something we participated?",
+        "quiz_desc": "What is the reulst of adding all the values - Numbere of Munseong's cats + Number of Cochl's co founders + Number of French",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "IEEE DCASE"
+                "title": "11"
             },
             {
                 "no": 2,
-                "title": "Slush"
+                "title": "12"
             },
             {
                 "no": 3,
-                "title": "Google Inception Award"
+                "title": "13"
             },
             {
                 "no": 4,
-                "title": "Kaggle: General Purpose Audio Tagging"
+                "title": "14"
             }
         ],
         "quiz_correct_answer": 3,
@@ -217,341 +219,99 @@
     },
     {
         "quiz_id": "q09",
-        "quiz_desc": "How many sounds does Cochl support?",
+        "quiz_desc": "What is the Junghye's favorite restaurants for lunch",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "21"
+                "title": "Halal Guys"
             },
             {
                 "no": 2,
-                "title": "23"
+                "title": "Jilhal Bros"
             },
             {
                 "no": 3,
-                "title": "25"
+                "title": "Five Guys"
             },
             {
                 "no": 4,
-                "title": "27"
+                "title": "Woowa Bros"
             }
         ],
-        "quiz_correct_answer": 3,
+        "quiz_correct_answer": 2,
         "quiz_type": "TEXT"
     },
     {
         "quiz_id": "q10",
-        "quiz_desc": "Where Messi recently moved to?",
+        "quiz_desc": "Guess whose remote working environment it is",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "FC Barcelona"
+                "title": "HyoJeong"
             },
             {
                 "no": 2,
-                "title": "FC Seoul"
+                "title": "Jieun"
             },
             {
                 "no": 3,
-                "title": "Paris Saint-Germain"
+                "title": "Hyemin"
             },
             {
                 "no": 4,
-                "title": "Arsenal"
+                "title": "Jeongsoo"
             }
         ],
-        "quiz_correct_answer": 3,
-        "quiz_type": "TEXT"
+        "quiz_correct_answer": 4,
+        "quiz_type": "IMAGE",
+        "quiz_image_url": "https://imgur.com/0rl9AA5"
     },
     {
         "quiz_id": "q11",
-        "quiz_desc": "Which station is not included in subway Line 2?",
+        "quiz_desc": "Which food is Vihn addicteed to eating for the whole week",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Kkachisan"
+                "title": "Egg"
             },
             {
                 "no": 2,
-                "title": "Magok"
+                "title": "Egg plant"
             },
             {
                 "no": 3,
-                "title": "Silim"
+                "title": "Potato"
             },
             {
                 "no": 4,
-                "title": "Wangshimni"
+                "title": "Sweet Potato"
             }
         ],
-        "quiz_correct_answer": 2,
+        "quiz_correct_answer": 1,
         "quiz_type": "TEXT"
     },
     {
         "quiz_id": "q12",
-        "quiz_desc": "Which brands and products are not paired correctly?",
+        "quiz_desc": "What is Seonghyeon's MBTI",
         "quiz_selector": [
             {
                 "no": 1,
-                "title": "Monami-ball pen"
+                "title": "INTP"
             },
             {
                 "no": 2,
-                "title": "Espoir-bag"
+                "title": "INFP"
             },
             {
                 "no": 3,
-                "title": "Enfant-Cheese"
+                "title": "ISFP"
             },
             {
                 "no": 4,
-                "title": "Mon cher tonton-Cookie"
-            }
-        ],
-        "quiz_correct_answer": 2,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q13",
-        "quiz_desc": "Which musical instrument Sooyeon can play?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Drum"
-            },
-            {
-                "no": 2,
-                "title": "Cello"
-            },
-            {
-                "no": 3,
-                "title": "Flute"
-            },
-            {
-                "no": 4,
-                "title": "Organ"
-            }
-        ],
-        "quiz_correct_answer": 1,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q14",
-        "quiz_desc": "Thomas travelled more than 4000 kilometers by (blank). What should be in the blank?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Swimming"
-            },
-            {
-                "no": 2,
-                "title": "Running"
-            },
-            {
-                "no": 3,
-                "title": "Hitchhiking"
-            },
-            {
-                "no": 4,
-                "title": "Riding"
+                "title": "ISTP"
             }
         ],
         "quiz_correct_answer": 3,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q15",
-        "quiz_desc": "Simple TMI times! Which TMI and people are not correctly matched?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Il-Young: I can't eat malatang becaus of its taste"
-            },
-            {
-                "no": 2,
-                "title": "Junghye: I can eat all the foods in the world!"
-            },
-            {
-                "no": 3,
-                "title": "Hyemin:My left feet is bigger than the right one"
-            },
-            {
-                "no": 4,
-                "title": "Jeongsoo:My fingernails are born to be long"
-            }
-        ],
-        "quiz_correct_answer": 3,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q16",
-        "quiz_desc": "Donmoon gets his Jujitsu (blank) belt. Which color of the belt did he get?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Green"
-            },
-            {
-                "no": 2,
-                "title": "Brown"
-            },
-            {
-                "no": 3,
-                "title": "Blue"
-            },
-            {
-                "no": 4,
-                "title": "Purple"
-            }
-        ],
-        "quiz_correct_answer": 3,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q17",
-        "quiz_desc": "Subin has very special certificate. What kind of certificate did he has?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Baristar"
-            },
-            {
-                "no": 2,
-                "title": "Florist"
-            },
-            {
-                "no": 3,
-                "title": "Marriage counselor"
-            },
-            {
-                "no": 4,
-                "title": "Recreation coach"
-            }
-        ],
-        "quiz_correct_answer": 4,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q18",
-        "quiz_desc": "Sooyeon once lived in (blank) city. Which city did she live?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Montreal"
-            },
-            {
-                "no": 2,
-                "title": "Vancouver"
-            },
-            {
-                "no": 3,
-                "title": "Toronto"
-            },
-            {
-                "no": 4,
-                "title": "Ottawa"
-            }
-        ],
-        "quiz_correct_answer": 1,
-        "quiz_type": "TEXT"
-    },
-    {
-        "quiz_id": "q19",
-        "quiz_desc": "Who is Thibault?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "Left"
-            },
-            {
-                "no": 2,
-                "title": "Middle"
-            },
-            {
-                "no": 3,
-                "title": "Right"
-            },
-            {
-                "no": 4,
-                "title": "There is no Thibault"
-            }
-        ],
-        "quiz_correct_answer": 3,
-        "quiz_type": "IMAGE",
-        "quiz_image_url": "https://i.imgur.com/TEZTxRC.jpg"
-    },
-    {
-        "quiz_id": "q20",
-        "quiz_desc": "Which is not correctly matched?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "1-Aesoo"
-            },
-            {
-                "no": 2,
-                "title": "2-Suyoung"
-            },
-            {
-                "no": 3,
-                "title": "3-Donmoon"
-            },
-            {
-                "no": 4,
-                "title": "4-Yoonchang"
-            }
-        ],
-        "quiz_correct_answer": 4,
-        "quiz_type": "IMAGE",
-        "quiz_image_url": "https://i.imgur.com/D0Xkh0p.png"
-    },
-    {
-        "quiz_id": "q21",
-        "quiz_desc": "Which is correctly matched?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "1-Benjamin"
-            },
-            {
-                "no": 2,
-                "title": "2-Jieun"
-            },
-            {
-                "no": 3,
-                "title": "3-Minseo"
-            },
-            {
-                "no": 4,
-                "title": "4-Subin"
-            }
-        ],
-        "quiz_correct_answer": 2,
-        "quiz_type": "IMAGE",
-        "quiz_image_url": "https://i.imgur.com/0LXDDrN.png"
-    },
-    {
-        "quiz_id": "q22",
-        "quiz_desc": "Our newest Notion page will be launched in next monday! Can you guess the domain address?",
-        "quiz_selector": [
-            {
-                "no": 1,
-                "title": "1-cochI.oopy.io"
-            },
-            {
-                "no": 2,
-                "title": "2-cochl.oopy.io"
-            },
-            {
-                "no": 3,
-                "title": "3-cochlear.oopy.io"
-            },
-            {
-                "no": 4,
-                "title": "4-cochl_exit_gazua.oopy.io"
-            }
-        ],
-        "quiz_correct_answer": 2,
         "quiz_type": "TEXT"
     }
 ]
